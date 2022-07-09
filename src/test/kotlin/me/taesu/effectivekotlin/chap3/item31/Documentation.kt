@@ -12,7 +12,8 @@ import org.junit.jupiter.api.Test
 class Documentation {
     @Test
     fun `문서로 규약을 정의하라`() {
-
+        MyCar().setBreakPedal(23.41)    // 0 ~ 1인지 문서화가 없음
+        MyDocumentedCar().setBreakPedal(0.23)
     }
 
 }
@@ -24,6 +25,20 @@ interface Car {
     // 무슨 동작을 하게 해야할까?
     fun setBreakPedal(pressure: Double)
     fun setGasPedal(pressure: Double)
+}
+
+class MyCar: Car {
+    override fun setWheelPosition(angle: Float) {
+        println(angle)
+    }
+
+    override fun setBreakPedal(pressure: Double) {
+        println(pressure)
+    }
+
+    override fun setGasPedal(pressure: Double) {
+        println(pressure)
+    }
 }
 
 // 아래처럼 주석을 달면 각 값의 범위도 알 수 있고 어떤 의미를 뜻하는지도 알 수 있다.
@@ -49,4 +64,18 @@ interface DocumentedCar {
      */
     fun setBreakPedal(pressure: Double)
     fun setGasPedal(pressure: Double)
+}
+
+class MyDocumentedCar: DocumentedCar {
+    override fun setWheelPosition(angle: Float) {
+        println(angle)
+    }
+
+    override fun setBreakPedal(pressure: Double) {
+        println(pressure)
+    }
+
+    override fun setGasPedal(pressure: Double) {
+        println(pressure)
+    }
 }
