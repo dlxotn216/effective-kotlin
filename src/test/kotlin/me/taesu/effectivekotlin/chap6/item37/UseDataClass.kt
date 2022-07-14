@@ -1,4 +1,4 @@
-package me.taesu.effectivekotlin.chap6.item36
+package me.taesu.effectivekotlin.chap6.item37
 
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
