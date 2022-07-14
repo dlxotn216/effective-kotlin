@@ -1,4 +1,4 @@
-package me.taesu.effectivekotlin.chap3.item31
+package me.taesu.effectivekotlin.chap4.item31
 
 import org.junit.jupiter.api.Test
 
