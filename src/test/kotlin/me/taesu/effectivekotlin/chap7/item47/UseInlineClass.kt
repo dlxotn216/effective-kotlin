@@ -33,3 +33,26 @@ value class Key(private val key: Long)
 class User(
     val userKey: Key
 )
+
+@JvmInline
+value class Duration(val millis: Long) {
+    companion object {
+        fun millis(millis: Long) = Duration(millis)
+        fun seconds(seconds: Long) = Duration(seconds * 1000)
+    }
+}
+
+// amount가 얼마인지 어떻게 아나?
+fun waitBad(amount: Long) {
+
+}
+
+// 얼마나 기다릴지 value class로 나타내면
+fun wait(duration: Duration) {
+
+}
+
+// 실제 아래처럼 컴파일 됨
+// fun wait(millis: Long) {
+//
+// }
