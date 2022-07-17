@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Test
  * @version effective-kotlin
  * @since effective-kotlin
  */
-class UseInline {
+class UseInlineFunction {
     @Test
     fun `함수타입 파라미터를 갖는 함수는 inline으로`() {
         myrepeat(10) {
